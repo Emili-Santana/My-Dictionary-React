@@ -4,18 +4,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
 
 export default function Dictionary() {
-    let [keyword, setkeyword] = useState(" ");
+    let [keyword, setkeyword] = useState("");
 
     function handleResponse(response){
       console.log(response.data[0]);
     }
+    
   function search(event) {
     event.preventDefault(); 
   
-  }
-  let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en_US${keyword}`
+
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+
   axios.get(apiUrl).then(handleResponse)
-console.log(apiUrl)
+}
 
  function handleKeyChange (event){
     setkeyword(event.target.value);
