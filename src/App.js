@@ -19,10 +19,10 @@ function App() {
         </main>
         <footer className="App-footer">
           This project was coded by
-          <a href="https://github.com/Emili-Santana" >
+          <a href="https://github.com/Emili-Santana" target="_blank" rel="noreferrer"  >
           </a> and is  open-sourced on 
-           <a href="https://github.com/Emili-Santana/my-dictionary-project"> GitHub </a> 
-           and  hosted on <a href="https://best-dictionary-react.netlify.app/" >
+           <a href="https://github.com/Emili-Santana/my-dictionary-project" target="_blank" rel="noreferrer" > GitHub </a> 
+           and  hosted on <a href="https://best-dictionary-react.netlify.app/" target="_blank" rel="noreferrer" >
           Netlify
           </a>
         </footer>
