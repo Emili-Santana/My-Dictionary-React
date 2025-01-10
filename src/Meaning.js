@@ -1,4 +1,4 @@
-import React from "react";
+
 
 export default function Meaning(props) {
   console.log(props.meaning);
@@ -12,14 +12,14 @@ export default function Meaning(props) {
               {definition.definition}
               <br/>
 
-              <em>{definition.exemple}</em>
+              <em>{definition.example}</em>
             </p>
           </div>
         );
       })}
 
       {props.meaning.definitions[0].definition}
-      {props.meaning.definitions[0].exemple}
+      {props.meaning.definitions[0].example}
     </div>
   );
 }
