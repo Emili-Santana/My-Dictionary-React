@@ -1,6 +1,8 @@
 .App {
   font-family: Arial, sans-serif;
   text-align: center;
+
+ 
 }
 
 .App-header {
@@ -8,6 +10,19 @@
   color: white;
   padding: 20px;
 }
+
+.App-main {
+  color:white;
+  background-color: #99c7cc;
+}
+.title {
+  font-size: 80px;
+}
+
+.sub-title {
+  font-size: 20px;
+}
+
 
 .App-footer {
   background-color: #04a29f;

@@ -9,11 +9,11 @@ function App() {
   return (
     <div className="App">
       <div container>
-        <header className="App-header">
-          <h1>My Dictionary</h1>
-          <p>Find meanings and definitions for words!</p>
+        <header className="App-header ">
+          <h1 className='title'>My Dictionary</h1>
+          <p className='sub-title'>Find meanings and definitions for words!</p>
         </header>
-        <main>
+        <main className='App-main'>
        
       
       <Dictionary />
