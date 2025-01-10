@@ -4,6 +4,7 @@ import Dictionary from './Dictionary';
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -16,6 +17,7 @@ function App() {
        
       
       <Dictionary />
+   
         </main>
         <footer className="App-footer">
           This project was coded by

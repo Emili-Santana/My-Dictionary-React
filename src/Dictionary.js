@@ -2,12 +2,14 @@ import React, {useState} from "react";
 import './Dictionary.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from "axios";
+import Results from './Results';
 
 export default function Dictionary() {
     let [keyword, setkeyword] = useState("");
+    let [results, setresults] = useState(null);
 
     function handleResponse(response){
-      console.log(response.data[0]);
+      setresults(response.data[0]);
     }
     
   function search(event) {
@@ -42,6 +44,8 @@ export default function Dictionary() {
           Search
         </button>
       </form>
+
+      <Results results={results}/>
     </div>
   );
 }
