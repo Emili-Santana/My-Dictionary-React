@@ -1,25 +1,27 @@
-
+import './Meaning.css';
 
 export default function Meaning(props) {
+  const { meaning } = props;
   console.log(props.meaning);
+
+  const firstDefinition = meaning.definitions && meaning.definitions[0];
+
   return (
     <div className="Meaning">
-      <h3>{props.meaning.partOfSpeech}</h3>
-      {props.meaning.definitions.map(function (definition, index) {
-        return (
-          <div key={index}>
-            <p>
-              {definition.definition}
-              <br/>
-
-              <em>{definition.example}</em>
+      <h3 className="part-of-speech">{props.meaning.partOfSpeech}</h3>
+ 
+           {firstDefinition && (
+        <div>
+          <p className='definition'>
+            {firstDefinition.definition}
+          </p>
+          {firstDefinition.example && (
+            <p className='example '>Ex.:
+              {firstDefinition.example}
             </p>
-          </div>
-        );
-      })}
-
-      {props.meaning.definitions[0].definition}
-      {props.meaning.definitions[0].example}
+          )}
+        </div>
+      )}
     </div>
   );
 }
