@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Dictionary from './Dictionary';
-
+import Logo from './logo-dictionary.jpeg';
 
 
 
@@ -10,8 +10,10 @@ function App() {
     <div className="App">
       <div container>
         <header className="App-header ">
+        <img src={Logo} alt="Logo" className="logo" />
           <h1 className='title'>My Dictionary</h1>
-          <p className='sub-title'>Find meanings and definitions for words!</p>
+        
+      
         </header>
         <main className='App-main'>
        

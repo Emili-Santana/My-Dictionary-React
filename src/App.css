@@ -6,9 +6,17 @@
 }
 
 .App-header {
+  display: flex;
+  align-items: center; 
+  justify-content:center; 
+  padding: 20px;
   background-color: #04a29f;
   color: white;
-  padding: 20px;
+}
+.logo {
+  width: 120px;  
+  height: auto;
+  margin-right: 15px; 
 }
 
 .App-main {
