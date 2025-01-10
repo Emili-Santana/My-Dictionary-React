@@ -29,21 +29,19 @@ export default function Dictionary() {
   return (
     <div className="Dictionary">
       <form onSubmit={search}>
-        <label htmlFor="searchInput" className="form-search mt-3 mb-3" >Search for a word:</label>
+        <label htmlFor="searchInput" className="form-search mt-3 mb-3 fs-3" >What word do you want to look up?</label>
         <input 
           type="search" 
           className="form-control w-25 mx-auto" 
           placeholder="Type the word"
           onChange={handleKeyChange}
         />
-        <button 
-          type="submit" 
-          className="btn mt-3" 
-          style={{ backgroundColor: '#04a29f', color: '#ffffff' }}
-        >
-          Search
-        </button>
+      
       </form>
+
+      <p>
+      Ex.: paris, wine, yoga, coding
+      </p>
 
       <Results results={results}/>
     </div>
