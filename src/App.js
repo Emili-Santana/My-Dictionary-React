@@ -18,7 +18,7 @@ function App() {
         <main className='App-main'>
        
       
-      <Dictionary />
+      <Dictionary defaultKeyword="Home" />
    
         </main>
         <footer className="App-footer">
