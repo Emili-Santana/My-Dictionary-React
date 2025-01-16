@@ -7,9 +7,10 @@
         border-radius: 8px;
         padding: 20px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        margin: 20px auto;
+        margin: 10px auto;
         max-width: 1000px;
         text-align: left;
+        margin-bottom: 0;
       }
       
       .title-photos {
@@ -19,7 +20,7 @@
         color: #04a29f; 
         margin-bottom: 3px;
         text-align: left;
-        margin-left: 0;
+  
       }
       
      

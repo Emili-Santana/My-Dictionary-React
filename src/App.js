@@ -8,7 +8,7 @@ import Logo from './logo-dictionary.jpeg';
 function App() {
   return (
     <div className="App">
-      <div container>
+       <div className="container">
         <header className="App-header ">
         <img src={Logo} alt="Logo" className="logo" />
           <h1 className='title'>My Dictionary</h1>
