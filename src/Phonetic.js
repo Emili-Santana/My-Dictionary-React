@@ -18,7 +18,7 @@ export default function Phonetic(props) {
     🔊  
         </a>
       ) : (
-        <span className="audio">No audio available</span>
+        <span className="audio">🔇</span>
       )}
 
 <span className="text"> {props.phonetic.text} </span>

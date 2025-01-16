@@ -1,10 +1,15 @@
+.Synonyms {
+  display: flex;         
+  gap: 10px;            
+  list-style-type: none; 
+  padding: 0;            
+  color: #333; 
+  font-size: 16px;
+  margin-top: 5px;
+}
 
-  
+.Synonyms-title{
+  color:black
+}
 
-  .Synonyms {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333; 
-    margin: 0;
 
-  }
