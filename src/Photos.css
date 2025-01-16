@@ -1,0 +1,47 @@
+
+
+    .Photos {
+        display: flex;
+        flex-wrap: wrap;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin: 20px auto;
+        max-width: 1000px;
+        text-align: left;
+      }
+      
+      .title-photos {
+        font-family: Arial, sans-serif;
+        font-size: 28px;
+        font-weight: bold;
+        color: #04a29f; 
+        margin-bottom: 3px;
+        text-align: left;
+        margin-left: 0;
+      }
+      
+     
+      
+      .Photos img {
+        border-radius: 5px;
+        margin: 5px 0px;
+        max-width: 100%;
+        height: auto;
+        max-height: 400px;
+      }
+      
+  
+  
+
+  .Photos .col-1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    flex: 1 1 30%;
+    box-sizing: border-box;
+  }
+  
+ 
