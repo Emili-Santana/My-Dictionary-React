@@ -2,3 +2,9 @@
 .Dictionary {
     min-height: 100vh;
 }
+
+.text-erro {
+    color: red;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }

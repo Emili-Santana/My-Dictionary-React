@@ -8,19 +8,27 @@ export default function Dictionary(props) {
   let [keyword, setkeyword] = useState(props.defaultKeyword);
   let [results, setresults] = useState(null);
   let[loaded,setLoaded] = useState(false);
+  const [error, setError] = useState(null);
 
 
   //Call Api answer
   function handleResponse(response) {
     setresults(response.data[0]);
     setLoaded (true);
+    setError(null);
+  }
+
+  // call the function in case of erro
+  function handleError(error) {
+    setLoaded(true);
+    setError("Sorry, we couldn't find the word you are looking for."); 
   }
 
 //Call when the form is submitted
   function search(event) {
    if  (event) event.preventDefault();
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios.get(apiUrl).then(handleResponse);
+    axios.get(apiUrl).then(handleResponse).catch(handleError);// call the function in case of erro
   }
   
   //Change the word
@@ -55,7 +63,8 @@ export default function Dictionary(props) {
 
       <p>Ex.: paris, wine, yoga, coding</p>
 
-      <Results results={results} />
+      {error && <p className="text-erro">{error}</p>}{/* show the erro mensage, if is the case */}
+      <Results results={results} />{/* show the results, if is the case */}
     </div>
   );
  } else {
