@@ -6,8 +6,8 @@ export default function Phonetic(props) {
     <div className="Phonetic">
       <strong className="Pronunciation-title">Pronunciation: </strong>
 
-     
-
+<div className="audio-line">
+     <p> <strong>Audio:</strong></p>
       {props.phonetic.audio ? (
         <a
           href={props.phonetic.audio}
@@ -20,8 +20,13 @@ export default function Phonetic(props) {
       ) : (
         <span className="audio">🔇</span>
       )}
+      </div>
 
+
+<div className="text-line">
+<p> <strong>written:</strong></p>
 <span className="text"> {props.phonetic.text} </span>
+</div>
     </div>
   );
 }
