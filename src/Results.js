@@ -5,7 +5,7 @@ import "./Results.css";
 
 export default function Results(props) {
     if (props.results) {
-      const phonetic = props.results.phonetics[0]; // Pega o primeiro item (se for o mesmo áudio)
+      const phonetic = props.results.phonetics[0]; // Consider the first one text or audio
       return (
         <div className="Results">
           <section>
