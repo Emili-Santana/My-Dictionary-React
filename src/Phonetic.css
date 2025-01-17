@@ -42,6 +42,10 @@
     color: #333; 
   }
 
+  .audio-button{
+    
+    border: none;
+  }
 
   .Phonetic p,
   .Phonetic span {
