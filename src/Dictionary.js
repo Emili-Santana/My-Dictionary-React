@@ -14,11 +14,15 @@ export default function Dictionary(props) {
 
   //Call Api answer
   function handleDictionaryResponse(response) {
+    if (response.data && response.data.length > 0) {
     setresults(response.data[0]);
     setLoaded(true);
     setError(null);
+  } else {
+    handleError();
   }
-
+  }
+//Call Api Photos
   function handlePexelsResponse(response) {
     console.log(response.data);
     setPhotos(response.data.photos);
@@ -27,7 +31,7 @@ export default function Dictionary(props) {
   function handleError(error) {
     setLoaded(true);
     setError(
-      `Sorry, we couldn't find the word "${keyword}" .`
+      `Sorry, we couldn't find the word "${keyword}".`
     );
   }
 
@@ -55,7 +59,15 @@ export default function Dictionary(props) {
     setkeyword(event.target.value);
   }
 
-  // treat the submitted form
+ // Reset all the states to clear the search
+ function resetSearch() {
+  setkeyword(props.defaultKeyword);  
+  setresults(null);
+  setPhotos(null);
+  setError(null);
+  setLoaded(false);
+}
+   // Handle form submission
   function handleSubmit(event) {
     event.preventDefault();
     search();
@@ -65,7 +77,7 @@ export default function Dictionary(props) {
     search();
   }
 
-  if (loaded && results) {
+  
     return (
       <div className="Dictionary">
         <form onSubmit={handleSubmit}>
@@ -77,20 +89,23 @@ export default function Dictionary(props) {
             className="form-control w-25 mx-auto"
             placeholder="Type the word"
             onChange={handleKeyChange}
+        
           />
         </form>
+        <p className="example-form">Ex.: Paris, wine, yoga, coding</p>
+        <button className="btn-clear-search btn-secondary mt-3" onClick={resetSearch}>Clear Search</button>
 
-        <p>Ex.: paris, wine, yoga, coding</p>
-
+       
+        {loaded && results && (
+          <div>
         {error && <p className="text-erro">{error}</p>}
         {/* show the erro mensage, if is the case */}
         <Results results={results} />
         {/* show the results, if is the case */}
 
         <Photos photos={photos} />
-      </div>
-    );
-  } else {
-    return <p>Loading</p>;
-  }
+        </div>
+      )}
+    </div>
+  );
 }

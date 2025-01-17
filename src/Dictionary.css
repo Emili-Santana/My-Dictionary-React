@@ -8,3 +8,18 @@
     font-size: 1.5rem;
     font-weight: bold;
   }
+
+  .example-form{
+    color: white;
+    margin-bottom: -10px;
+  }
+
+  .btn-clear-search{
+    background-color: #04a29f;
+    color: white;
+    border-color: #04a29f;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+ 
+  }
