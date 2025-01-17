@@ -1,6 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Dictionary from './dictionary';
+import Dictionary from './Dictionary';
 import Logo from './logo-dictionary.jpeg';
 
 
