@@ -50,4 +50,13 @@
   }
   
 
+  @media (max-width: 480px) {
+    .Phonetic {
+      padding: 10px; 
+    }
   
+    .title-photos {
+      font-size: 20px; 
+    }
+  }
+    
