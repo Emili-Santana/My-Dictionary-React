@@ -1,11 +1,12 @@
 .Synonyms {
-  display: flex;         
+  display: flex;      
+  flex-wrap: wrap;    
   gap: 10px;            
   list-style-type: none; 
   padding: 0;            
   color: #333; 
   font-size: 16px;
-  margin-top: 5px;
+  margin-top: 3px;
 }
 
 .Synonyms-title{

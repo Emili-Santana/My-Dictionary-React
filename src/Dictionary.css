@@ -1,25 +1,43 @@
 
 .Dictionary {
-    min-height: 100vh;
+    min-height: 755px;
 }
 
 .text-erro {
-    color: red;
+    color:#04a29f;
+    background-color: white;
     font-size: 1.5rem;
     font-weight: bold;
+    max-width: 40%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 15px;
+    text-decoration: underline;
   }
 
   .example-form{
     color: white;
     margin-bottom: -10px;
   }
-
-  .btn-clear-search{
+  .btn-clear-search {
     background-color: #04a29f;
     color: white;
     border-color: #04a29f;
-    padding: 5px;
+    padding: 10px 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
- 
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    outline: none;
   }
+  
+  .btn-clear-search:hover {
+    background-color: #028b89;
+    border-color: #028b89;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+  

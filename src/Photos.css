@@ -8,12 +8,16 @@
         padding: 20px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         margin: 10px auto;
-        max-width: 1000px;
+        max-width: 900px;
+     
         text-align: left;
         margin-bottom: 0;
       }
       
       .title-photos {
+        display: flex;      
+        flex-wrap: wrap; 
+       
         font-family: Arial, sans-serif;
         font-size: 28px;
         font-weight: bold;
@@ -30,7 +34,7 @@
         margin: 5px 0px;
         max-width: 100%;
         height: auto;
-        max-height: 400px;
+        max-height: 300px;
       }
       
   
@@ -45,4 +49,5 @@
     box-sizing: border-box;
   }
   
- 
+
+  

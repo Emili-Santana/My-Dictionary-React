@@ -37,8 +37,14 @@ export default function Dictionary(props) {
 
   //Call when the form is submitted
   function search(event) {
-    if (event) event.preventDefault();
-
+   
+      if (event) event.preventDefault();
+  
+      
+      if (!keyword.trim()) {
+        setError("Please enter a word to search.");
+        return;
+      }
 
     // API URL for Dictionary
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`; 
@@ -61,7 +67,7 @@ export default function Dictionary(props) {
 
  // Reset all the states to clear the search
  function resetSearch() {
-  setkeyword(props.defaultKeyword);  
+  setkeyword("");  
   setresults(null);
   setPhotos(null);
   setError(null);
@@ -70,12 +76,9 @@ export default function Dictionary(props) {
    // Handle form submission
   function handleSubmit(event) {
     event.preventDefault();
-    search();
+    search(event);
   }
-  // make the initial searching when the form is submitted
-  if (!loaded && !results) {
-    search();
-  }
+  
 
   
     return (
@@ -89,17 +92,19 @@ export default function Dictionary(props) {
             className="form-control w-25 mx-auto"
             placeholder="Type the word"
             onChange={handleKeyChange}
-        
+          value={keyword} 
           />
         </form>
         <p className="example-form">Ex.: Paris, wine, yoga, coding</p>
         <button className="btn-clear-search btn-secondary mt-3" onClick={resetSearch}>Clear Search</button>
 
        
-        {loaded && results && (
-          <div>
+    
         {error && <p className="text-erro">{error}</p>}
         {/* show the erro mensage, if is the case */}
+        
+        {loaded && results && (
+          <div>
         <Results results={results} />
         {/* show the results, if is the case */}
 
